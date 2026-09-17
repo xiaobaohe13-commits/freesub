@@ -4,30 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇱🇻 LV 01 - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
   type: vless
-  server: atomic-prase23893.my-vm.work
-  port: 8088
-  uuid: tmp_user
+  server: 208.103.161.249
+  port: 80
+  uuid: a3c51f71-ffb5-4c80-a136-cee4b36d6e85
   udp: true
   tls: false
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /api
+    path: /
     headers:
-      Host: queuev4.vk.com
+      Host: kAmRaN01-aFgmDQ-1.KaMRan-01.wOrkeRs.DEv
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇱🇻 LV 01 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇱🇻 LV 01 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
