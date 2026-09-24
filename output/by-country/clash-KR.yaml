@@ -5,19 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 - xiaohe
-  type: vless
-  server: 47.80.57.116
+  type: vmess
+  server: 140.238.2.250
   port: 443
-  uuid: 3db635e4-f9ec-42d6-8aba-e23df8b0e6da
+  uuid: 41a7089a-040b-4538-8b8d-010902405bde
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: mia6.pages.dev
-  network: ws
-  ws-opts:
-    path: /TG:@MiaChatChannel
-    headers:
-      Host: mia6.pages.dev
 - name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
   type: vless
   server: 151.245.106.49
@@ -31,19 +27,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: random
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  type: vless
-  server: 172.64.88.251
-  port: 8880
-  uuid: 87a5d3eb-afd4-4193-9787-c54ef7c26c8c
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-    headers:
-      Host: patient-cake-39c7.44-e7a.workers.dev
-- name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
   type: vless
   server: 151.245.106.49
   port: 2053
@@ -63,7 +46,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01 - xiaohe
   - 🇰🇷 韩国 (South Korea) 02 - xiaohe
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -72,6 +54,5 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01 - xiaohe
   - 🇰🇷 韩国 (South Korea) 02 - xiaohe
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 - xiaohe
 rules:
 - MATCH,PROXIES
