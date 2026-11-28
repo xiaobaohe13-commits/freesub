@@ -4,21 +4,21 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 MY 01 - xiaohe
+- name: 🇮🇷 IR 01 - xiaohe
   type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  server: Ir.wbzo.ir
+  port: 2080
+  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
   alterId: 0
   cipher: auto
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇲🇾 MY 02 - xiaohe
+- name: 🇮🇷 IR 02 - xiaohe
   type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  server: Ir.wbzo.ir
+  port: 2080
+  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
   alterId: 0
   cipher: auto
   udp: true
@@ -29,14 +29,14 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇲🇾 MY 01 - xiaohe
-  - 🇲🇾 MY 02 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾 MY 01 - xiaohe
-  - 🇲🇾 MY 02 - xiaohe
+  - 🇮🇷 IR 01 - xiaohe
+  - 🇮🇷 IR 02 - xiaohe
 rules:
 - MATCH,PROXIES
